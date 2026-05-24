@@ -1,0 +1,3132 @@
+[
+  {
+    "number": 1,
+    "name": "2 term Mooney-Rivlin",
+    "category": "Invariant polynomial / Mooney-Rivlin family",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{01}(I_2-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Good low-order baseline. Use at least two deformation modes when possible.",
+    "active": true,
+    "family": "Mooney-Rivlin polynomial",
+    "application_tags": [
+      "baseline",
+      "low-order",
+      "moderate strain"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Good low-order baseline. Use at least two deformation modes when possible.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 1,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "C10",
+      "C01"
+    ],
+    "category_description": "Low-to-high order invariant polynomial rubber models."
+  },
+  {
+    "number": 2,
+    "name": "3 term Mooney-Rivlin",
+    "category": "Invariant polynomial / Mooney-Rivlin family",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{01}(I_2-3)+C_{11}(I_1-3)(I_2-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C11",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Adds I1-I2 coupling; avoid uniaxial-only calibration.",
+    "active": true,
+    "family": "Mooney-Rivlin polynomial",
+    "application_tags": [
+      "interaction term",
+      "moderate strain"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Adds I1-I2 coupling; avoid uniaxial-only calibration.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "C10",
+      "C01",
+      "C11"
+    ],
+    "category_description": "Low-to-high order invariant polynomial rubber models."
+  },
+  {
+    "number": 3,
+    "name": "5 term Mooney-Rivlin",
+    "category": "Invariant polynomial / Mooney-Rivlin family",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{01}(I_2-3)+C_{20}(I_1-3)^2+C_{11}(I_1-3)(I_2-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C11",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Higher-order polynomial; stability scan is important outside calibration range.",
+    "active": true,
+    "family": "Mooney-Rivlin polynomial",
+    "application_tags": [
+      "higher order",
+      "moderate/high strain"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Higher-order polynomial; stability scan is important outside calibration range.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "C10",
+      "C01",
+      "C20",
+      "C11"
+    ],
+    "category_description": "Low-to-high order invariant polynomial rubber models."
+  },
+  {
+    "number": 4,
+    "name": "9 term Mooney-Rivlin",
+    "category": "Invariant polynomial / Mooney-Rivlin family",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{01}(I_2-3)+C_{20}(I_1-3)^2+C_{30}(I_1-3)^3+C_{11}(I_1-3)(I_2-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C30",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C11",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Image row named 9-term; implemented exactly as supplied active-coefficient table variant.",
+    "active": true,
+    "family": "Mooney-Rivlin polynomial",
+    "application_tags": [
+      "source-table variant",
+      "higher order"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Image row named 9-term; implemented exactly as supplied active-coefficient table variant.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 5,
+    "parameter_names": [
+      "C10",
+      "C01",
+      "C20",
+      "C30",
+      "C11"
+    ],
+    "category_description": "Low-to-high order invariant polynomial rubber models."
+  },
+  {
+    "number": 5,
+    "name": "Third degree polynomial",
+    "category": "Invariant polynomial / general polynomial",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{01}(I_2-3)+C_{11}(I_1-3)(I_2-3)+C_{20}(I_1-3)^2+C_{02}(I_2-3)^2+C_{21}(I_1-3)^2(I_2-3)+C_{12}(I_1-3)(I_2-3)^2",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C11",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C02",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C21",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C12",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Many-parameter polynomial; use multi-mode data and overfitting checks.",
+    "active": true,
+    "family": "Third-degree polynomial",
+    "application_tags": [
+      "many parameters",
+      "overfit risk"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Many-parameter polynomial; use multi-mode data and overfitting checks.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 7,
+    "parameter_names": [
+      "C10",
+      "C01",
+      "C11",
+      "C20",
+      "C02",
+      "C21",
+      "C12"
+    ],
+    "category_description": "Flexible I1/I2 polynomial forms; high overfitting risk."
+  },
+  {
+    "number": 6,
+    "name": "Neo-Hookean",
+    "category": "Neo-Hookean / one-parameter network",
+    "equation_latex": "W=\\frac{\\mu}{2}(I_1-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Best first baseline and sanity check; one parameter only.",
+    "active": true,
+    "family": "Neo-Hookean baseline",
+    "application_tags": [
+      "baseline",
+      "small/moderate strain"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "soft tissue first-pass"
+    ],
+    "calibration_notes": "Best first baseline and sanity check; one parameter only.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 1,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 1,
+    "parameter_names": [
+      "mu"
+    ],
+    "category_description": "First-pass baseline and sanity check."
+  },
+  {
+    "number": 7,
+    "name": "2 term Yeoh",
+    "category": "Reduced polynomial / Yeoh family",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{20}(I_1-3)^2",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Can fit uniaxial well, but biaxial/planar are needed for transferability.",
+    "active": true,
+    "family": "Yeoh reduced polynomial",
+    "application_tags": [
+      "I1-only",
+      "filled rubber candidate"
+    ],
+    "material_classes": [
+      "filled rubber",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Can fit uniaxial well, but biaxial/planar are needed for transferability.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "C10",
+      "C20"
+    ],
+    "category_description": "I1-only reduced polynomial models, often used for filled rubbers."
+  },
+  {
+    "number": 8,
+    "name": "3 term Yeoh",
+    "category": "Reduced polynomial / Yeoh family",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{20}(I_1-3)^2+C_{30}(I_1-3)^3",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C30",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Use multi-mode data; high-order coefficients can overfit.",
+    "active": true,
+    "family": "Yeoh reduced polynomial",
+    "application_tags": [
+      "I1-only",
+      "high strain"
+    ],
+    "material_classes": [
+      "filled rubber",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Use multi-mode data; high-order coefficients can overfit.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "C10",
+      "C20",
+      "C30"
+    ],
+    "category_description": "I1-only reduced polynomial models, often used for filled rubbers."
+  },
+  {
+    "number": 9,
+    "name": "5 term Yeoh",
+    "category": "Reduced polynomial / Yeoh family",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{20}(I_1-3)^2+C_{30}(I_1-3)^3+C_{40}(I_1-3)^4+C_{50}(I_1-3)^5",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C30",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C40",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C50",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Five-term Yeoh is flexible but not recommended with sparse data.",
+    "active": true,
+    "family": "Yeoh reduced polynomial",
+    "application_tags": [
+      "many parameters",
+      "overfit risk"
+    ],
+    "material_classes": [
+      "filled rubber",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Five-term Yeoh is flexible but not recommended with sparse data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 5,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 5,
+    "parameter_names": [
+      "C10",
+      "C20",
+      "C30",
+      "C40",
+      "C50"
+    ],
+    "category_description": "I1-only reduced polynomial models, often used for filled rubbers."
+  },
+  {
+    "number": 10,
+    "name": "5 term Arruda-Boyce",
+    "category": "Network / finite chain extensibility",
+    "equation_latex": "W=\\mu\\sum_{i=1}^{5}\\frac{c_i}{\\lambda_L^{2i-2}}(I_1^i-3^i)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "lambda_L",
+        "lower": 1.01,
+        "upper": 20,
+        "initial": 5,
+        "scale": "stretch_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "lambda_L should be constrained by maximum test stretch; good physical finite-chain model.",
+    "active": true,
+    "family": "Arruda-Boyce",
+    "application_tags": [
+      "limiting chain stretch",
+      "physical network"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "network elastomer"
+    ],
+    "calibration_notes": "lambda_L should be constrained by maximum test stretch; good physical finite-chain model.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "mu",
+      "lambda_L"
+    ],
+    "category_description": "Physically motivated limiting-chain models with finite extensibility."
+  },
+  {
+    "number": 11,
+    "name": "Gent",
+    "category": "Network / finite chain extensibility",
+    "equation_latex": "W=-\\frac{\\mu}{2}(I_L-3)\\ln\\left(1-\\frac{I_1-3}{I_L-3}\\right)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "I_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "I_L must exceed the maximum sampled I1. Strongly penalized near the singularity.",
+    "active": true,
+    "family": "Gent",
+    "application_tags": [
+      "limiting I1",
+      "strain stiffening"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "I_L must exceed the maximum sampled I1. Strongly penalized near the singularity.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "mu",
+      "I_L"
+    ],
+    "category_description": "Physically motivated limiting-chain models with finite extensibility."
+  },
+  {
+    "number": 12,
+    "name": "2 term Ogden",
+    "category": "Principal-stretch / Ogden family",
+    "equation_latex": "W=\\sum_{i=1}^{2}\\frac{\\mu_i}{\\alpha_i}(\\lambda_1^{\\alpha_i}+\\lambda_2^{\\alpha_i}+\\lambda_3^{\\alpha_i}-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "mu1",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha1",
+        "lower": -20,
+        "upper": 20,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "mu2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha2",
+        "lower": -20,
+        "upper": 20,
+        "initial": -2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Ogden parameters are not uniquely identifiable from uniaxial-only data.",
+    "active": true,
+    "family": "Ogden spectral",
+    "application_tags": [
+      "spectral",
+      "compression/tension capable"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Ogden parameters are not uniquely identifiable from uniaxial-only data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "mu1",
+      "alpha1",
+      "mu2",
+      "alpha2"
+    ],
+    "category_description": "Spectral principal-stretch models; powerful but non-unique without multi-mode data."
+  },
+  {
+    "number": 13,
+    "name": "3 term Ogden",
+    "category": "Principal-stretch / Ogden family",
+    "equation_latex": "W=\\sum_{i=1}^{3}\\frac{\\mu_i}{\\alpha_i}(\\lambda_1^{\\alpha_i}+\\lambda_2^{\\alpha_i}+\\lambda_3^{\\alpha_i}-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "mu1",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha1",
+        "lower": -20,
+        "upper": 20,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "mu2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha2",
+        "lower": -20,
+        "upper": 20,
+        "initial": -2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "mu3",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha3",
+        "lower": -20,
+        "upper": 20,
+        "initial": 4,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Three-term Ogden needs broad multi-mode data and regularization/selection checks.",
+    "active": true,
+    "family": "Ogden spectral",
+    "application_tags": [
+      "spectral",
+      "many parameters",
+      "high flexibility"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Three-term Ogden needs broad multi-mode data and regularization/selection checks.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 5,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 6,
+    "parameter_names": [
+      "mu1",
+      "alpha1",
+      "mu2",
+      "alpha2",
+      "mu3",
+      "alpha3"
+    ],
+    "category_description": "Spectral principal-stretch models; powerful but non-unique without multi-mode data."
+  },
+  {
+    "number": 14,
+    "name": "Veronda-Westmann",
+    "category": "Exponential / soft-tissue type",
+    "equation_latex": "W=C_1(e^{\\alpha(I_1-3)}-1)-C_2(I_2-3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C1",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Exponential models can overflow; keep parameter bounds physically modest.",
+    "active": true,
+    "family": "Veronda-Westmann",
+    "application_tags": [
+      "exponential stiffening"
+    ],
+    "material_classes": [
+      "soft tissue",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Exponential models can overflow; keep parameter bounds physically modest.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "C1",
+      "alpha",
+      "C2"
+    ],
+    "category_description": "Exponential strain-stiffening models, common for soft-tissue style behavior."
+  },
+  {
+    "number": 15,
+    "name": "Humphrey-Yin",
+    "category": "Exponential / soft-tissue type",
+    "equation_latex": "W=C_1(e^{C_2(I_1-3)}-1)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C1",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Best used for strain-stiffening soft tissue style data.",
+    "active": true,
+    "family": "Humphrey-Yin",
+    "application_tags": [
+      "I1 exponential"
+    ],
+    "material_classes": [
+      "soft tissue"
+    ],
+    "calibration_notes": "Best used for strain-stiffening soft tissue style data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "C1",
+      "C2"
+    ],
+    "category_description": "Exponential strain-stiffening models, common for soft-tissue style behavior."
+  },
+  {
+    "number": 16,
+    "name": "Hart-Smith",
+    "category": "Exponential / Hart-Smith family",
+    "equation_latex": "W=\\frac{C_1e^{C_3(I_1-3)^2}}{2}+3C_2\\ln I_2",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C1",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C3",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "C3 controls exponential stiffening; use stability scan after fit.",
+    "active": true,
+    "family": "Hart-Smith",
+    "application_tags": [
+      "exponential",
+      "I2 log"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "soft tissue"
+    ],
+    "calibration_notes": "C3 controls exponential stiffening; use stability scan after fit.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "category_description": "Hart-Smith exponential/log-I2 family."
+  },
+  {
+    "number": 17,
+    "name": "Peng-Landel",
+    "category": "Principal-stretch / logarithmic spectral",
+    "equation_latex": "W=C_1\\sum_{i=1}^{3}[\\lambda_i^2-1-\\ln\\lambda_i^2-\\frac16(\\ln\\lambda_i^2)^2+\\frac1{18}(\\ln\\lambda_i^2)^3-\\frac1{216}(\\ln\\lambda_i^2)^4]",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C1",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Single scale parameter; good spectral comparison model.",
+    "active": true,
+    "family": "Peng-Landel",
+    "application_tags": [
+      "principal stretch",
+      "log strain series"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Single scale parameter; good spectral comparison model.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 1,
+    "parameter_names": [
+      "C1"
+    ],
+    "category_description": "Principal-stretch logarithmic series model."
+  },
+  {
+    "number": 18,
+    "name": "Knowles",
+    "category": "Network / generalized finite extensibility",
+    "equation_latex": "W=\\frac{\\mu}{2b}[(1+\\frac{b(I_1-3)}{n})^n-1]",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "b",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "n",
+        "lower": 0.05,
+        "upper": 20,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "n and b may be correlated; use adaptive bounds.",
+    "active": true,
+    "family": "Knowles",
+    "application_tags": [
+      "power law",
+      "finite extensibility"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "n and b may be correlated; use adaptive bounds.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "mu",
+      "b",
+      "n"
+    ],
+    "category_description": "Finite extensibility with additional power-law flexibility."
+  },
+  {
+    "number": 19,
+    "name": "Martins",
+    "category": "Fiber-influenced / exponential anisotropic approximation",
+    "equation_latex": "W=C_1(e^{C_2(I_1-3)}-1)+C_3(e^{C_4(\\lambda_f-1)^2}-1)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C1",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C3",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C4",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "lambda_f is approximated internally as max principal stretch; true anisotropic fiber direction is not yet modeled.",
+    "active": true,
+    "family": "Martins",
+    "application_tags": [
+      "fiber stretch proxy",
+      "exponential"
+    ],
+    "material_classes": [
+      "soft tissue",
+      "fiber-reinforced approximation"
+    ],
+    "calibration_notes": "lambda_f is approximated internally as max principal stretch; true anisotropic fiber direction is not yet modeled.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "C1",
+      "C2",
+      "C3",
+      "C4"
+    ],
+    "category_description": "Fiber-like exponential model approximated in this isotropic workflow."
+  },
+  {
+    "number": 20,
+    "name": "Pucci-Saccomandi",
+    "category": "Network / finite extensibility with I2 correction",
+    "equation_latex": "W=-\\frac12\\mu J_L\\ln(1-\\frac{I_1-3}{J_L})+C_2\\ln(\\frac13 I_2)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "J_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Needs I2-sensitive data such as planar/shear for C2 identification.",
+    "active": true,
+    "family": "Pucci-Saccomandi",
+    "application_tags": [
+      "Gent-type",
+      "I2 correction"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Needs I2-sensitive data such as planar/shear for C2 identification.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "mu",
+      "J_L",
+      "C2"
+    ],
+    "category_description": "Limiting-chain models with additional I2 sensitivity."
+  },
+  {
+    "number": 21,
+    "name": "Gregory",
+    "category": "Power-law / phenomenological",
+    "equation_latex": "W=\\frac{A}{2-n}(I_1-3+C^2)^{1-n/2}+\\frac{B}{2+m}(I_1-3+C^2)^{1+m/2}",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "A",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "B",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C",
+        "lower": 1e-06,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "n",
+        "lower": -20,
+        "upper": 1.95,
+        "initial": 0,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "m",
+        "lower": -1.95,
+        "upper": 20,
+        "initial": 0,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "n and m denominators avoid 2 and -2 by bounded parameter ranges.",
+    "active": true,
+    "family": "Gregory",
+    "application_tags": [
+      "power-law",
+      "many parameters"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "n and m denominators avoid 2 and -2 by bounded parameter ranges.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 5,
+    "parameter_names": [
+      "A",
+      "B",
+      "C",
+      "n",
+      "m"
+    ],
+    "category_description": "Phenomenological power-law models; require robust fitting and validation."
+  },
+  {
+    "number": 22,
+    "name": "Edwards-Vilgis",
+    "category": "Network / finite extensibility",
+    "equation_latex": "W=\\frac{\\mu}{2}[\\frac{(J_L+2)(J_L-3)(I_1-3)}{J_L(J_L-I_1+3)}+\\ln(1-\\frac{I_1-3}{J_L})]",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "J_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "J_L must stay above maximum I1-3 domain requirement.",
+    "active": true,
+    "family": "Edwards-Vilgis simplified",
+    "application_tags": [
+      "limiting I1"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "network elastomer"
+    ],
+    "calibration_notes": "J_L must stay above maximum I1-3 domain requirement.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "mu",
+      "J_L"
+    ],
+    "category_description": "Finite extensibility / limiting-chain model family."
+  },
+  {
+    "number": 23,
+    "name": "David De-Thomas",
+    "category": "Power-law / phenomenological",
+    "equation_latex": "W=\\frac{A}{2-n}(I_1-3+C^2)^{1-n/2}+k(I_1-3)^2",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "A",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C",
+        "lower": 1e-06,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "n",
+        "lower": -20,
+        "upper": 1.95,
+        "initial": 0,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "k",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Use multi-start optimization due to nonlinearity in n and C.",
+    "active": true,
+    "family": "David De-Thomas",
+    "application_tags": [
+      "power-law",
+      "quadratic correction"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Use multi-start optimization due to nonlinearity in n and C.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "A",
+      "C",
+      "n",
+      "k"
+    ],
+    "category_description": "Phenomenological power-law models; require robust fitting and validation."
+  },
+  {
+    "number": 24,
+    "name": "Gent-Thomas",
+    "category": "Hybrid invariant / Gent-Thomas",
+    "equation_latex": "W=C_1(I_1-3)+3C_2\\ln I_2",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C1",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "I2 log term benefits from planar/shear or biaxial data.",
+    "active": true,
+    "family": "Gent-Thomas",
+    "application_tags": [
+      "I1 + log I2"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "I2 log term benefits from planar/shear or biaxial data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "C1",
+      "C2"
+    ],
+    "category_description": "I1 + log I2 hybrid invariant form."
+  },
+  {
+    "number": 25,
+    "name": "Yeoh-Fleming",
+    "category": "Hybrid finite extensibility / Yeoh-Fleming",
+    "equation_latex": "W=\\frac{A}{B}(1-e^{-B(I_1-3)})-C_{10}(I_L-3)\\ln(1-\\frac{I_1-3}{I_L-3})",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "A",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "B",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C10",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "I_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Combine exponential and limiting-chain terms; use wide-strain data.",
+    "active": true,
+    "family": "Yeoh-Fleming",
+    "application_tags": [
+      "exponential + limiting chain"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "filled rubber"
+    ],
+    "calibration_notes": "Combine exponential and limiting-chain terms; use wide-strain data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "A",
+      "B",
+      "C10",
+      "I_L"
+    ],
+    "category_description": "Mixed exponential and finite-chain stiffening model."
+  },
+  {
+    "number": 26,
+    "name": "4 term H. Bechir et al.",
+    "category": "Principal-stretch / Bechir spectral polynomial",
+    "equation_latex": "W=\\sum_{n=1}^{2}\\sum_{r=1}^{2}C_n^r(\\lambda_1^{2n}+\\lambda_2^{2n}+\\lambda_3^{2n}-3)^r",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C11",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C12",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C21",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C22",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Four coefficients; multi-mode calibration recommended.",
+    "active": true,
+    "family": "H. Bechir et al. spectral polynomial",
+    "application_tags": [
+      "spectral polynomial",
+      "overfit risk"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Four coefficients; multi-mode calibration recommended.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "C11",
+      "C12",
+      "C21",
+      "C22"
+    ],
+    "category_description": "Spectral polynomial forms in powers of principal stretches."
+  },
+  {
+    "number": 27,
+    "name": "6 term H. Bechir et al.",
+    "category": "Principal-stretch / Bechir spectral polynomial",
+    "equation_latex": "W=\\sum_{n=1}^{3}\\sum_{r=1}^{2}C_n^r(\\lambda_1^{2n}+\\lambda_2^{2n}+\\lambda_3^{2n}-3)^r",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C11",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C12",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C21",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C22",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C31",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C32",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Six coefficients; do not use with sparse data.",
+    "active": true,
+    "family": "H. Bechir et al. spectral polynomial",
+    "application_tags": [
+      "spectral polynomial",
+      "many parameters"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Six coefficients; do not use with sparse data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 5,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 6,
+    "parameter_names": [
+      "C11",
+      "C12",
+      "C21",
+      "C22",
+      "C31",
+      "C32"
+    ],
+    "category_description": "Spectral polynomial forms in powers of principal stretches."
+  },
+  {
+    "number": 28,
+    "name": "3 term Hartmann-Neff",
+    "category": "Invariant polynomial / Hartmann-Neff family",
+    "equation_latex": "W=\\alpha(I_1^3-3^3)+C_{10}(I_1-3)+C_{01}(I_2^{3/2}-3\\sqrt3)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "alpha",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C10",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Requires multi-mode data to separate I1 and I2 terms.",
+    "active": true,
+    "family": "Hartmann-Neff",
+    "application_tags": [
+      "I1^3",
+      "I2^(3/2)"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Requires multi-mode data to separate I1 and I2 terms.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "alpha",
+      "C10",
+      "C01"
+    ],
+    "category_description": "Hartmann-Neff invariant family with I1^3 and I2^(3/2) terms."
+  },
+  {
+    "number": 29,
+    "name": "5 term Hartmann-Neff",
+    "category": "Invariant polynomial / Hartmann-Neff family",
+    "equation_latex": "W=\\alpha(I_1^3-3^3)+C_{10}(I_1-3)+C_{01}(I_2^{3/2}-3\\sqrt3)+C_{20}(I_1-3)^2+C_{02}(I_2^{3/2}-3\\sqrt3)^2",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "alpha",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C10",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C02",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Five coefficients; use stability scan after fitting.",
+    "active": true,
+    "family": "Hartmann-Neff",
+    "application_tags": [
+      "higher order",
+      "I1/I2"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Five coefficients; use stability scan after fitting.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 5,
+    "parameter_names": [
+      "alpha",
+      "C10",
+      "C01",
+      "C20",
+      "C02"
+    ],
+    "category_description": "Hartmann-Neff invariant family with I1^3 and I2^(3/2) terms."
+  },
+  {
+    "number": 30,
+    "name": "7 term Hartmann-Neff",
+    "category": "Invariant polynomial / Hartmann-Neff family",
+    "equation_latex": "W=\\alpha(I_1^3-3^3)+C_{10}(I_1-3)+C_{01}(I_2^{3/2}-3\\sqrt3)+C_{20}(I_1-3)^2+C_{02}(I_2^{3/2}-3\\sqrt3)^2+C_{30}(I_1-3)^3+C_{03}(I_2^{3/2}-3\\sqrt3)^3",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "alpha",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C10",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C01",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C02",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C30",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C03",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Seven-term version needs dense multi-mode data.",
+    "active": true,
+    "family": "Hartmann-Neff",
+    "application_tags": [
+      "seven terms",
+      "overfit risk"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Seven-term version needs dense multi-mode data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 5,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 7,
+    "parameter_names": [
+      "alpha",
+      "C10",
+      "C01",
+      "C20",
+      "C02",
+      "C30",
+      "C03"
+    ],
+    "category_description": "Hartmann-Neff invariant family with I1^3 and I2^(3/2) terms."
+  },
+  {
+    "number": 31,
+    "name": "Modified Yeoh",
+    "category": "Reduced polynomial / modified Yeoh",
+    "equation_latex": "W=C_{10}(I_1-3)+C_{20}(I_1-3)^2+C_{30}(I_1-3)^3+\\frac{\\alpha}{\\beta}(1-e^{-\\beta(I_1-3)})",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C20",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C30",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "beta",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Modified Yeoh combines polynomial and exponential saturation.",
+    "active": true,
+    "family": "Modified Yeoh",
+    "application_tags": [
+      "Yeoh + exponential saturation"
+    ],
+    "material_classes": [
+      "filled rubber",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Modified Yeoh combines polynomial and exponential saturation.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 5,
+    "parameter_names": [
+      "C10",
+      "C20",
+      "C30",
+      "alpha",
+      "beta"
+    ],
+    "category_description": "Yeoh polynomial with exponential correction."
+  },
+  {
+    "number": 32,
+    "name": "Van Der Waals",
+    "category": "Van der Waals / limiting-chain interaction",
+    "equation_latex": "W=\\mu\\left[-(\\lambda_m^2-3)\\left(\\ln(1-\\eta)+\\eta\\right)-\\frac{2a}{3}\\left(\\frac{I_1-3}{2}\\right)^{3/2}\\right],\\quad \\eta=\\sqrt{\\frac{(1-\\beta)I_1+\\beta I_2-3}{\\lambda_m^2-3}}",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": "Small-strain stress scale / shear-like modulus parameter."
+      },
+      {
+        "name": "lambda_m",
+        "lower": 1.74,
+        "upper": 30,
+        "initial": 5.0,
+        "scale": "stretch_limit",
+        "unit": "-",
+        "description": "Limiting chain stretch parameter; keep lambda_m^2-3 positive and eta<1."
+      },
+      {
+        "name": "a",
+        "lower": -10,
+        "upper": 10,
+        "initial": 0.0,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": "Dimensionless interaction/non-Gaussian correction coefficient."
+      },
+      {
+        "name": "beta",
+        "lower": 0.0,
+        "upper": 1.0,
+        "initial": 0.5,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": "Invariant mixing coefficient between I1 and I2."
+      }
+    ],
+    "notes": "",
+    "active": true,
+    "family": "Limiting-chain interaction model",
+    "application_tags": [
+      "large strain",
+      "limiting chain stretch",
+      "I1/I2 interaction",
+      "filled elastomer candidate"
+    ],
+    "material_classes": [
+      "filled rubber",
+      "rubber-like elastomer",
+      "finite extensibility"
+    ],
+    "calibration_notes": "Prefer at least uniaxial + biaxial/planar data over a wide strain range. The beta parameter is weakly identifiable from uniaxial-only data.",
+    "parameterization_notes": "lambda_m must keep eta < 1 over the complete calibration domain. beta is constrained to [0, 1]. a is dimensionless.",
+    "limitation_notes": "Logarithmic singularity as eta approaches 1; the kernel returns a large penalty outside the admissible domain.",
+    "source_equation_status": "row 32 supplied by user image and implemented",
+    "reference_keys": [
+      "user-supplied row 32 equation",
+      "standard finite-extensibility calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 12,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "mu",
+      "lambda_m",
+      "a",
+      "beta"
+    ],
+    "category_description": "Finite-extensibility model with I1/I2 invariant mixing."
+  },
+  {
+    "number": 33,
+    "name": "Fung",
+    "category": "Exponential / Fung-type",
+    "equation_latex": "W=\\frac{\\mu}{2b}(e^{b(I_1-3)}-1)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "b",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Classic exponential stiffening model; monitor overflow and tangent stiffness.",
+    "active": true,
+    "family": "Fung",
+    "application_tags": [
+      "exponential stiffening"
+    ],
+    "material_classes": [
+      "soft tissue",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Classic exponential stiffening model; monitor overflow and tangent stiffness.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "mu",
+      "b"
+    ],
+    "category_description": "Fung-type exponential stiffening."
+  },
+  {
+    "number": 34,
+    "name": "Horgan-Saccomandi",
+    "category": "Network / finite extensibility",
+    "equation_latex": "W=-\\frac{\\mu}{2}J_L\\ln\\left(\\frac{J_L^3-J_L^2I_1+J_LI_2-1}{(J_L-1)^3}\\right)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "J_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Requires admissible logarithm argument; domain controlled in stability scan.",
+    "active": true,
+    "family": "Horgan-Saccomandi",
+    "application_tags": [
+      "limiting chain",
+      "I1/I2 coupled"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Requires admissible logarithm argument; domain controlled in stability scan.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "mu",
+      "J_L"
+    ],
+    "category_description": "Finite extensibility / limiting-chain model family."
+  },
+  {
+    "number": 35,
+    "name": "Kilian",
+    "category": "Network / finite extensibility",
+    "equation_latex": "W=-\\mu J_L[\\ln(1-\\sqrt{\\frac{I_1-3}{J_L}})+\\sqrt{\\frac{I_1-3}{J_L}}]",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "J_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Logarithmic finite-extensibility form; J_L must exceed sampled domain.",
+    "active": true,
+    "family": "Kilian",
+    "application_tags": [
+      "limiting I1"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "Logarithmic finite-extensibility form; J_L must exceed sampled domain.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "mu",
+      "J_L"
+    ],
+    "category_description": "Finite extensibility / limiting-chain model family."
+  },
+  {
+    "number": 36,
+    "name": "3 parameter Gent",
+    "category": "Network / finite extensibility with I2 blend",
+    "equation_latex": "W=\\frac{\\mu}{2}[-\\alpha(I_L-3)\\ln(1-\\frac{I_1-3}{I_L-3})+(1-\\alpha)(I_2-3)]",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "alpha",
+        "lower": 0,
+        "upper": 1,
+        "initial": 0.8,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "I_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "alpha blends limiting-chain and I2 behavior.",
+    "active": true,
+    "family": "Three-parameter Gent",
+    "application_tags": [
+      "Gent + I2 blend"
+    ],
+    "material_classes": [
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "alpha blends limiting-chain and I2 behavior.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "mu",
+      "alpha",
+      "I_L"
+    ],
+    "category_description": "Gent-type finite extensibility blended with I2 behavior."
+  },
+  {
+    "number": 37,
+    "name": "Low strain Hoss-Marczak",
+    "category": "Hybrid / low-strain Hoss-Marczak",
+    "equation_latex": "W=\\frac{\\alpha}{\\beta}(1-e^{-\\beta(I_1-3)})+\\frac{\\mu}{2b}[(1+\\frac{b(I_1-3)}{n})^n-1]",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "alpha",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "beta",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "b",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "n",
+        "lower": 0.05,
+        "upper": 20,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "Low-strain hybrid; parameters can be correlated.",
+    "active": true,
+    "family": "Hoss-Marczak",
+    "application_tags": [
+      "low strain",
+      "hybrid"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "filled rubber"
+    ],
+    "calibration_notes": "Low-strain hybrid; parameters can be correlated.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 5,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 5,
+    "parameter_names": [
+      "alpha",
+      "beta",
+      "mu",
+      "b",
+      "n"
+    ],
+    "category_description": "Low-strain hybrid model."
+  },
+  {
+    "number": 38,
+    "name": "High strain Hoss-Marczak",
+    "category": "Hybrid / high-strain Hoss-Marczak",
+    "equation_latex": "W=\\frac{\\alpha}{\\beta}(1-e^{-\\beta(I_1-3)})+\\frac{\\mu}{2b}[(1+\\frac{b(I_1-3)}{n})^n-1]+C_2\\ln(\\frac13 I_2)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "alpha",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "beta",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "mu",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.1,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "b",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "n",
+        "lower": 0.05,
+        "upper": 20,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "High-strain hybrid with I2 correction; requires multi-mode data.",
+    "active": true,
+    "family": "Hoss-Marczak",
+    "application_tags": [
+      "high strain",
+      "hybrid",
+      "I2 correction"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "filled rubber"
+    ],
+    "calibration_notes": "High-strain hybrid with I2 correction; requires multi-mode data.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 5,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 6,
+    "parameter_names": [
+      "alpha",
+      "beta",
+      "mu",
+      "b",
+      "n",
+      "C2"
+    ],
+    "category_description": "High-strain hybrid with I2 correction."
+  },
+  {
+    "number": 39,
+    "name": "Improved Hart-Smith",
+    "category": "Exponential / improved Hart-Smith",
+    "equation_latex": "W=\\frac{C_1e^{C_3(I_1-3)^n}}{n}+3C_2\\ln(I_2)",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C1",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C2",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C3",
+        "lower": 1e-08,
+        "upper": 100,
+        "initial": 1,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "n",
+        "lower": 0.1,
+        "upper": 10,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "n controls exponential power; use bounded global-local fitting.",
+    "active": true,
+    "family": "Improved Hart-Smith",
+    "application_tags": [
+      "exponential power",
+      "I2 log"
+    ],
+    "material_classes": [
+      "soft tissue",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "n controls exponential power; use bounded global-local fitting.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 4,
+    "parameter_names": [
+      "C1",
+      "C2",
+      "C3",
+      "n"
+    ],
+    "category_description": "Power-enhanced Hart-Smith style exponential model."
+  },
+  {
+    "number": 40,
+    "name": "Takamizawa-Hayashi",
+    "category": "Network / finite extensibility",
+    "equation_latex": "W=-c\\ln[1-(\\frac{I_1-2}{J_L})^2]",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "c",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "J_L",
+        "lower": 3.01,
+        "upper": 1000,
+        "initial": 50,
+        "scale": "invariant_limit",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "J_L must be large enough to keep log argument positive.",
+    "active": true,
+    "family": "Takamizawa-Hayashi",
+    "application_tags": [
+      "limiting I1"
+    ],
+    "material_classes": [
+      "soft tissue",
+      "rubber-like elastomer"
+    ],
+    "calibration_notes": "J_L must be large enough to keep log argument positive.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 2,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 2,
+    "parameter_names": [
+      "c",
+      "J_L"
+    ],
+    "category_description": "Finite extensibility / limiting-chain model family."
+  },
+  {
+    "number": 41,
+    "name": "Yamashita-Kawabata",
+    "category": "Reduced polynomial / power-law",
+    "equation_latex": "W=C_{10}(I_1-3)+\\frac{C_3}{N+1}(I_1-3)^{N+1}",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C3",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "N",
+        "lower": 0.05,
+        "upper": 10,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "N controls nonlinear order; multi-start recommended.",
+    "active": true,
+    "family": "Yamashita-Kawabata",
+    "application_tags": [
+      "power law",
+      "reduced polynomial"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "filled rubber"
+    ],
+    "calibration_notes": "N controls nonlinear order; multi-start recommended.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 3,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 3,
+    "parameter_names": [
+      "C10",
+      "C3",
+      "N"
+    ],
+    "category_description": "Reduced polynomial plus power-law terms."
+  },
+  {
+    "number": 42,
+    "name": "Amin",
+    "category": "Reduced polynomial / power-law",
+    "equation_latex": "W=C_{10}(I_1-3)+\\frac{C_3}{N+1}(I_1-3)^{N+1}+\\frac{C_4}{M+1}(I_1-3)^{M+1}",
+    "recommended_tests": [
+      "uniaxial",
+      "biaxial",
+      "planar",
+      "simple_shear"
+    ],
+    "parameters": [
+      {
+        "name": "C10",
+        "lower": 0,
+        "upper": 20,
+        "initial": 0.05,
+        "scale": "positive_stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C3",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "N",
+        "lower": 0.05,
+        "upper": 10,
+        "initial": 2,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "C4",
+        "lower": -20,
+        "upper": 20,
+        "initial": 0,
+        "scale": "stress",
+        "unit": "-",
+        "description": ""
+      },
+      {
+        "name": "M",
+        "lower": 0.05,
+        "upper": 10,
+        "initial": 3,
+        "scale": "dimensionless",
+        "unit": "-",
+        "description": ""
+      }
+    ],
+    "notes": "M and N can be correlated; use adaptive bounds and model comparison.",
+    "active": true,
+    "family": "Amin",
+    "application_tags": [
+      "two power-law terms"
+    ],
+    "material_classes": [
+      "rubber-like elastomer",
+      "filled rubber"
+    ],
+    "calibration_notes": "M and N can be correlated; use adaptive bounds and model comparison.",
+    "parameterization_notes": "Parameter bounds are optimizer search bounds. Stress-scaled parameters are multiplied by the detected test stress scale; limit parameters are domain-checked during evaluation.",
+    "limitation_notes": "Validate extrapolation with the stability scan and independent test modes before FEA use.",
+    "source_equation_status": "digitized from user supplied hyperelastic model table; metadata reviewed",
+    "reference_keys": [
+      "user-supplied hyperelastic model table",
+      "standard hyperelastic calibration practice"
+    ],
+    "complexity_level": 4,
+    "minimum_recommended_points_per_parameter": 8,
+    "preferred_optimizer": "recommended_adaptive_bounds",
+    "n_parameters": 5,
+    "parameter_names": [
+      "C10",
+      "C3",
+      "N",
+      "C4",
+      "M"
+    ],
+    "category_description": "Reduced polynomial plus power-law terms."
+  }
+]

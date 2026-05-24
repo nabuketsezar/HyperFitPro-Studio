@@ -1,0 +1,432 @@
+{
+  "Invariant polynomial / reduced polynomial": [
+    {
+      "number": 1,
+      "name": "2 term Mooney-Rivlin",
+      "file": "model_001_2_term_mooney_rivlin.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 2,
+      "name": "3 term Mooney-Rivlin",
+      "file": "model_002_3_term_mooney_rivlin.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 3,
+      "name": "5 term Mooney-Rivlin",
+      "file": "model_003_5_term_mooney_rivlin.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 4,
+      "name": "9 term Mooney-Rivlin",
+      "file": "model_004_9_term_mooney_rivlin.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 5,
+      "name": "Third degree polynomial",
+      "file": "model_005_third_degree_polynomial.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 6,
+      "name": "Neo-Hookean",
+      "file": "model_006_neo_hookean.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 7,
+      "name": "2 term Yeoh",
+      "file": "model_007_2_term_yeoh.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 8,
+      "name": "3 term Yeoh",
+      "file": "model_008_3_term_yeoh.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 9,
+      "name": "5 term Yeoh",
+      "file": "model_009_5_term_yeoh.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 28,
+      "name": "3 term Hartmann-Neff",
+      "file": "model_028_3_term_hartmann_neff.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 29,
+      "name": "5 term Hartmann-Neff",
+      "file": "model_029_5_term_hartmann_neff.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 30,
+      "name": "7 term Hartmann-Neff",
+      "file": "model_030_7_term_hartmann_neff.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 41,
+      "name": "Yamashita-Kawabata",
+      "file": "model_041_yamashita_kawabata.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 42,
+      "name": "Amin",
+      "file": "model_042_amin.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    }
+  ],
+  "Network / limiting-chain extensibility": [
+    {
+      "number": 10,
+      "name": "5 term Arruda-Boyce",
+      "file": "model_010_5_term_arruda_boyce.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 11,
+      "name": "Gent",
+      "file": "model_011_gent.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 18,
+      "name": "Knowles",
+      "file": "model_018_knowles.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 20,
+      "name": "Pucci-Saccomandi",
+      "file": "model_020_pucci_saccomandi.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 22,
+      "name": "Edwards-Vilgis",
+      "file": "model_022_edwards_vilgis.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 34,
+      "name": "Horgan-Saccomandi",
+      "file": "model_034_horgan_saccomandi.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 35,
+      "name": "Kilian",
+      "file": "model_035_kilian.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 36,
+      "name": "3 parameter Gent",
+      "file": "model_036_3_parameter_gent.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 40,
+      "name": "Takamizawa-Hayashi",
+      "file": "model_040_takamizawa_hayashi.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    }
+  ],
+  "Principal-stretch / spectral": [
+    {
+      "number": 12,
+      "name": "2 term Ogden",
+      "file": "model_012_2_term_ogden.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 13,
+      "name": "3 term Ogden",
+      "file": "model_013_3_term_ogden.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 17,
+      "name": "Peng-Landel",
+      "file": "model_017_peng_landel.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 26,
+      "name": "4 term H. Bechir et al.",
+      "file": "model_026_4_term_h_bechir.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 27,
+      "name": "6 term H. Bechir et al.",
+      "file": "model_027_6_term_h_bechir.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    }
+  ],
+  "Exponential / soft-tissue type": [
+    {
+      "number": 14,
+      "name": "Veronda-Westmann",
+      "file": "model_014_veronda_westmann.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 15,
+      "name": "Humphrey-Yin",
+      "file": "model_015_humphrey_yin.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 16,
+      "name": "Hart-Smith",
+      "file": "model_016_hart_smith.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 19,
+      "name": "Martins",
+      "file": "model_019_martins.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 33,
+      "name": "Fung",
+      "file": "model_033_fung.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 39,
+      "name": "Improved Hart-Smith",
+      "file": "model_039_improved_hart_smith.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    }
+  ],
+  "Hybrid / specialized phenomenological": [
+    {
+      "number": 21,
+      "name": "Gregory",
+      "file": "model_021_gregory.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 23,
+      "name": "David De-Thomas",
+      "file": "model_023_david_de_thomas.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 24,
+      "name": "Gent-Thomas",
+      "file": "model_024_gent_thomas.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 25,
+      "name": "Yeoh-Fleming",
+      "file": "model_025_yeoh_fleming.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 31,
+      "name": "Modified Yeoh",
+      "file": "model_031_modified_yeoh.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 32,
+      "name": "Source row missing / not visible",
+      "file": "model_032_source_missing.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 37,
+      "name": "Low strain Hoss-Marczak",
+      "file": "model_037_low_strain_hoss_marczak.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    },
+    {
+      "number": 38,
+      "name": "High strain Hoss-Marczak",
+      "file": "model_038_high_strain_hoss_marczak.py",
+      "recommended_tests": [
+        "uniaxial",
+        "biaxial",
+        "planar"
+      ]
+    }
+  ]
+}

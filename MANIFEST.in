@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include requirements.txt
+include requirements-dev.txt
+recursive-include docs *
+recursive-include sample_data *.csv *.md *.txt *.json
+recursive-include hyperfitpro/help/assets *.png *.jpg *.jpeg *.webp
+recursive-include hyperfitpro/plugins *.py
+recursive-include hyperfitpro/verification *.py

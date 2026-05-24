@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+build/
+dist/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# IDE / OS
+.vscode/
+.idea/
+.spyproject/
+.spyderproject
+.DS_Store
+Thumbs.db
+
+# HyperFitPro generated outputs
+hyperfit_runs/
+hyperfit_test_v*/
+runs/
+exports/
+reports/
+plots/
+logs/
+tools/
+help_captures/
+*.hyp2fit.bak
+*.hfp.bak
+*.sqlite
+*.db
+*.log
+
+# Large local datasets / private material data
+private_data/
+local_data/
+*.raw.csv
+*.xlsx.tmp
+
+# Packaging / installers
+*.spec
+installer_output/
+release_artifacts/

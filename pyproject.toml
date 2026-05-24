@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyperfitpro-studio"
+version = "1.0.0"
+description = "Guided hyperelastic material-model calibration studio with plugins, reports and FEA export"
+authors = [{ name = "Erdem Uyunmaz" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+keywords = ["hyperelasticity", "material calibration", "optimization", "FEA", "PySide6"]
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.11",
+  "matplotlib>=3.8",
+  "pandas>=2.0",
+  "openpyxl>=3.1",
+  "PySide6>=6.6",
+  "reportlab>=4.0",
+  "xlsxwriter>=3.1",
+]
+
+[project.scripts]
+hyperfitpro = "hyperfitpro.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hyperfitpro*"]
+
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.6",
+  "build>=1.2",
+]
+
+[tool.setuptools.package-data]
+"hyperfitpro.help" = ["assets/*.png", "assets/*.jpg", "assets/*.jpeg", "assets/*.webp"]
+"hyperfitpro.plugins" = ["embedded_models/*.py", "embedded_tools/*.py"]
+
+[tool.ruff]
+line-length = 120
+exclude = ["build", "dist", "*.egg-info"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
