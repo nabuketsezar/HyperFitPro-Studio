@@ -38,7 +38,7 @@ python -m hyperfitpro
 The Overleaf-ready LaTeX source is available at:
 
 ```text
-docs/theory/HyperFitPro_Hyperelastic_Theory_Manual.tex
+docs/theory/HyperFitPro_Hyperelastic_Theory_Manual
 ```
 
 ## Help
