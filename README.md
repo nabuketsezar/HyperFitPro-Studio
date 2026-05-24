@@ -350,7 +350,7 @@ Verification modules cover:
 |---|---|
 | User Guide | `docs/help/HyperFitPro_User_Guide.pdf` |
 | HTML Guide | `docs/help/HyperFitPro_User_Guide.html` |
-| Theory Manual | `docs/theory/HyperFitPro_Hyperelastic_Theory_Manual.tex` |
+| Theory Manual | `docs/theory/HyperFitPro_Hyperelastic_Theory_Manual` |
 | Plugin Guide | `docs/PLUGIN_AUTHORING_GUIDE.md` |
 | Validation Notes | `docs/VALIDATION_NOTES.md` |
 
